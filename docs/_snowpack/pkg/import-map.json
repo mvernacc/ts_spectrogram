@@ -1,0 +1,5 @@
+{
+  "imports": {
+    "CBuffer": "./CBuffer.js"
+  }
+}
