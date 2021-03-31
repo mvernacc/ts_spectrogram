@@ -7,7 +7,7 @@ module.exports = {
     /* ... */
   },
   plugins: [
-    '@snowpack/plugin-typescript',
+    ['@snowpack/plugin-typescript', {tsc: "tsc"}],
   ],
   packageOptions: {
     /* ... */
