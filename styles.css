@@ -23,3 +23,12 @@ button#start-stop {
   margin:6pt auto;
   display: block;
 }
+.github-badge {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+.github-badge a{
+  color: #eee;
+  text-decoration: none;
+}
