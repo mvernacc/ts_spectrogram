@@ -135,6 +135,8 @@ function drawSpectogram(canvas: HTMLCanvasElement,
     // Update the spectrogram itself.
     canvasCtx.beginPath();
     canvasCtx.clearRect(yAxisWidth, 0, plotWidth, plotHeight);
+    canvasCtx.fillStyle = 'rgb(0,0,0)';
+    canvasCtx.fillRect(yAxisWidth, 0, plotWidth, plotHeight);
     const timeNumBins = audioFreqPowerHistory.length;
     const freqNumBins = audioFreqPowerHistory.first()!.length;
     const dx = plotWidth / timeNumBins;
@@ -146,7 +148,7 @@ function drawSpectogram(canvas: HTMLCanvasElement,
         y = plotHeight - dy;
         for (let freqIndex = 0; freqIndex < freqNumBins; freqIndex++) {
             canvasCtx.fillStyle = `rgb(${audioFreqPower[freqIndex]},0,0)`;
-            canvasCtx.fillRect(x, y, dx, dy);
+            canvasCtx.fillRect(x, y, Math.ceil(dx), Math.ceil(dy));
             y -= dy;
         }
         x -= dx;
