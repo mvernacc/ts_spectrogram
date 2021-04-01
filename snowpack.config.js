@@ -3,6 +3,13 @@
 
 /** @type {import("snowpack").SnowpackUserConfig } */
 module.exports = {
+  exclude: [
+    "**/README.md",
+    "**/package.json",
+    "**/package-lock.json",
+    "**/tsconfig.json",
+    "**/snowpack.config.js"
+  ],
   mount: {
     /* ... */
   },
